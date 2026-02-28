@@ -14,6 +14,8 @@ def button():
 
     except ValueError:
         label.config(text="Please Enter A Number")
+    except FileExistsError:
+        label.config(text="This folder is existed. Please delete it before you try to make other one")
         
 window = Tk()
 #window stuff
@@ -45,4 +47,5 @@ button = Button(
 button.pack()
 
 window.mainloop()
+
 
